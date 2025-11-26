@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پروژه لوکس HTML/CSS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;900&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Vazirmatn', sans-serif;
+            background: #0d0d0d;
+            color: white;
+        }
+
+        header {
+            width: 100%;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #d4af37;
+        }
+
+        nav a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 400;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        .hero {
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=80') center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin: 0;
+            font-weight: 900;
+            color: #d4af37;
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-top: 20px;
+            color: #fff;
+        }
+
+        .btn {
+            margin-top: 30px;
+            padding: 15px 35px;
+            font-size: 20px;
+            background: #d4af37;
+            border: none;
+            color: #000;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #b38b2b;
+        }
+
+        .section {
+            padding: 100px 60px;
+            text-align: center;
+            background: #111;
+        }
+
+        .section h2 {
+            font-size: 40px;
+            color: #d4af37;
+        }
+
+        .cards {
+            margin-top: 60px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .card {
+            width: 300px;
+            background: #1a1a1a;
+            border-radius: 15px;
+            padding: 20px;
+            border: 2px solid #2a2a2a;
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #d4af37;
+        }
+
+        footer {
+            padding: 30px;
+            text-align: center;
+            background: #000;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">LUXURY</div>
+        <nav>
+            <a href="#hero">خانه</a>
+            <a href="#services">خدمات</a>
+            <a href="#contact">تماس</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="hero">
+        <div>
+            <h1>پروژه لوکس و خفن HTML & CSS</h1>
+            <p>طراحی مدرن، مینیمال و حرفه‌ای برای وب‌سایت‌های سطح بالا</p>
+            <button class="btn">شروع کنید</button>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <h2>خدمات ما</h2>
+        <div class="cards">
+            <div class="card">طراحی وب‌سایت لوکس</div>
+            <div class="card">UI/UX سطح بالا</div>
+            <div class="card">ساخت صفحات انیمیشنی</div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        © 2025 - همه حقوق محفوظ است
+    </footer>
+</body>
+</html>
