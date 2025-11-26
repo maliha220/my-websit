@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>پروژه لوکس HTML/CSS</title>
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;900&display=swap');
 
@@ -14,6 +15,7 @@
             color: white;
         }
 
+        /* ---------------- HEADER ---------------- */
         header {
             width: 100%;
             padding: 20px 60px;
@@ -30,7 +32,6 @@
         .logo {
             font-size: 28px;
             font-weight: 800;
-            letter-spacing: 2px;
             color: #195380;
         }
 
@@ -39,23 +40,23 @@
             text-decoration: none;
             color: #195380;
             font-weight: 400;
-            transition: 0.3s;
+            transition: .3s;
         }
-
         nav a:hover {
             color: #0d324e;
         }
 
+        /* ---------------- HERO ---------------- */
         .hero {
             height: 100vh;
-          background: 
-    linear-gradient(rgba(0,0,0,0.5), rgba(14, 184, 235, 0.297)),
-    url('./bulb-2287759_640.jpg') center/cover;
-
+            background:
+                linear-gradient(rgba(0,0,0,0.55), rgba(14, 184, 235, 0.25)),
+                url('./bulb-2287759_640.jpg') center/cover;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
+            padding: 0 20px;
         }
 
         .hero h1 {
@@ -68,7 +69,6 @@
         .hero p {
             font-size: 22px;
             margin-top: 20px;
-            color: #dbebea;
         }
 
         .btn {
@@ -76,21 +76,20 @@
             padding: 15px 35px;
             font-size: 20px;
             background: #195380;
+            color: white;
             border: none;
-            color: #fffafa;
             border-radius: 8px;
             cursor: pointer;
             transition: 0.3s;
         }
-
         .btn:hover {
             background: #0e4570;
         }
 
+        /* ---------------- SECTION ---------------- */
         .section {
             padding: 100px 60px;
             text-align: center;
-            background: #02325a32;
         }
 
         .section h2 {
@@ -108,54 +107,112 @@
 
         .card {
             width: 300px;
+            padding: 20px;
             background: #1a1a1a;
             border-radius: 15px;
-            padding: 20px;
             border: 2px solid #2a2a2a;
-            transition: 0.4s;
+            transition: .4s;
         }
-
         .card:hover {
             transform: translateY(-10px);
             border-color: #195380;
         }
 
+        /* ---------------- FOOTER ---------------- */
         footer {
             padding: 30px;
             text-align: center;
             background: #000;
             color: #195380;
         }
+
+        /* ---------------------------------------------------
+           RESPONSIVE DESIGN
+        --------------------------------------------------- */
+
+        /* --- MOBILE --- */
+        @media(max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+
+            nav a {
+                margin-left: 10px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .btn {
+                font-size: 16px;
+                padding: 12px 25px;
+            }
+
+            .section {
+                padding: 60px 20px;
+            }
+
+            .section h2 {
+                font-size: 28px;
+            }
+
+            .card {
+                width: 90%;
+            }
+        }
+
+        /* --- SMALL MOBILE --- */
+        @media(max-width: 480px) {
+            nav {
+                display: none; /* منو ساده برای موبایل */
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+
+            .hero h1 {
+                font-size: 26px;
+            }
+        }
+
     </style>
 </head>
+
 <body>
-    <header>
-        <div class="logo">WEBSIT</div>
-        <nav>
-            <a href="#hero">home</a>
-            <a href="#services">services</a>
-        
-        </nav>
-    </header>
 
-    <section class="hero" id="hero">
-        <div>
-           <h1>Luxury & Premium HTML & CSS Project</h1>
-<p>Modern, minimal, and professional design for high-end websites</p>
-<button class="btn">Get Started</button>
+<header>
+    <div class="logo">WEBSIT</div>
+    <nav>
+        <a href="#hero">home</a>
+        <a href="#services">about</a>
+        <a href="#services">services</a>
+    </nav>
+</header>
 
-        </div>
-    </section>
+<section class="hero" id="hero">
+    <div>
+        <h1>Luxury & Premium HTML & CSS Project</h1>
+        <p>Modern, minimal, and professional design for high-end websites</p>
+        <button class="btn">Get Started</button>
+    </div>
+</section>
 
-    <section class="section" id="services">
-        <h2>Our Services</h2>
-<div class="cards">
-    <div class="card">Luxury Website Design</div>
-    <div class="card">High-End UI/UX</div>
-    <div class="card">Animated Page Development</div>
-</div>
+<section class="section" id="services">
+    <h2>Our Services</h2>
 
-    </section>
+    <div class="cards">
+        <div class="card">Luxury Website Design</div>
+        <div class="card">High-End UI/UX</div>
+        <div class="card">Animated Page Development</div>
+    </div>
+
+</section>
+
 <footer id="contact">
     © 2025 - All Rights Reserved
 </footer>
